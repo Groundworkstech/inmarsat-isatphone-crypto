@@ -57,3 +57,6 @@ cipherstream.bin:  [ block 1 (16 bytes )][ block 2 (16 bytes )], etc.
 
 The encryption algorithm used to combine each block of plaintext.bin and cipherstream.bin into a block of ciphertext.bin is located in the function applycipher().
 
+
+![applycipher graph](/applycipher.png "applycipher code graph")
+

@@ -17,10 +17,10 @@ Dump of ciphered and plain data
 Directories:
 ------------
 
-balance-enquiry1 : dump of two complete "balance enquiry" operations (USSD requests)
-balance-enquiry2 : dump of two complete "balance enquiry" operations (USSD requests)
-bin : Binaries and scripts used
-src : Sources
+ * balance-enquiry1 : dump of two complete "balance enquiry" operations (USSD requests)
+ * balance-enquiry2 : dump of two complete "balance enquiry" operations (USSD requests)
+ * bin : Binaries and scripts used
+ * src : Sources
 
 
 Every dump was done immediately after the phone boot-up.
@@ -34,17 +34,17 @@ By looking at the applycipher() function it is clear that the R0 register is a p
 Generation of the dumps:
 ------------------------
 The steps to generate the dumps are:
-1) ISATPhonePro terminal to the computer via USB
-2) Execute bin/dopatch_out.sh to do the memory-patching
-3) Execute dump_out_packets.py to stablish a serial communication to the satellite terminal and dump the buffers
+ * ISATPhonePro terminal to the computer via USB
+ * Execute bin/dopatch_out.sh to do the memory-patching
+ * Execute dump_out_packets.py to stablish a serial communication to the satellite terminal and dump the buffers
 
 
 File format of the dumps:
 -------------------------
 Each dump contains three files:
-cipherstream.bin
-ciphertext.bin
-plaintext.bin
+ * cipherstream.bin
+ * ciphertext.bin
+ * plaintext.bin
 
 Both plaintext.bin and ciphertext.bin consist in N blocks of 256 bytes, each one containing 120 bits of user data (encoded as one bit for every word).
 cipherstream.bin consist in N blocks of 16 bytes, each one containing 128 bits of cipherstream.
